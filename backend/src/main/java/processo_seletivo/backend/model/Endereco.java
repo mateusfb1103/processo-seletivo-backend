@@ -1,11 +1,12 @@
 package processo_seletivo.backend.model;
 
 import jakarta.persistence.Embeddable;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Builder
 @Embeddable
 public class Endereco {
     private String logradouro;
