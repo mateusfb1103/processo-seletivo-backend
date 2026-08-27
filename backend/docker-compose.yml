@@ -13,6 +13,8 @@ services:
       SPRING_RABBITMQ_HOST: rabbitmq
       SPRING_RABBITMQ_PORT: 5672
       SPRING_ELASTICSEARCH_URIS: http://elasticsearch:9200
+    networks:
+      - desafio-net
 
   rabbitmq:
     image: rabbitmq:3-management
