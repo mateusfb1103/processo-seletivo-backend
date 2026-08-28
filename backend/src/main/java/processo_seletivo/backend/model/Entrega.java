@@ -1,9 +1,6 @@
 package processo_seletivo.backend.model;
 
-import jakarta.persistence.Embedded;
-import jakarta.persistence.Entity;
 import jakarta.persistence.*;
-import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,7 +18,9 @@ public class Entrega {
     @Id
     private UUID idEntrega;
 
-    @Column(name = "id_pedido", nullable = false)
+    @Column(name = "id_pedido",
+            nullable = false,
+            unique = true)
     private UUID idPedido;
 
     @Embedded
